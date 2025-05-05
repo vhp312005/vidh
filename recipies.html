@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+        }
+        body{
+            background-color: bisque;
+            color: chocolate;
+        }
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background-color: rgb(196, 155, 235);
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.3s ease;
+    }
+
+    .sidebar.hidden {
+            transform: translateX(-100%);
+    }
+
+    .sidebar a {
+            display: block;
+            padding: 10px 0;
+            color: rgb(139, 9, 9);
+            text-decoration: none;
+    }
+
+    .sidebar a:hover {
+            background-color: violet;
+    }
+
+    .toggle-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+    }
+
+    .content {
+            margin-left: 100px;
+            padding: 20px;
+            padding-left: 60px; /* some space for toggle button */
+    }
+    body a{
+        position: relative;
+        color: chocolate;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    body a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -2px; /* adjust for spacing under text */
+        width: 0;
+        height: 2px;
+        background-color: #ff4000;
+        transition: width 0.3s ease;
+    }
+
+    body a:hover::after {
+        width: 100%;
+    }
+    .food{
+        margin-left: 400px;
+        padding: 20px;
+        position: relative;
+        position: sticky;
+    }
+    .guj{
+        margin: 30px;
+        padding: 10px;
+    }
+    .south{
+        margin: 30px;
+        padding: 10px;
+    }
+    .raj{
+      margin: 30px;
+      padding: 10px;
+    }
+    .other{
+      margin: 30px;
+      padding: 10px;
+    }
+    .details{
+        padding: 20px;
+        margin: 20px;
+    }
+    .details p{
+        color: black;
+        margin-top: 0;
+        font-size: larger;
+    }
+    h3{
+        color: rgb(98, 3, 3);
+    }
+    .food a{
+        font-weight: 700;
+        font-size: large;
+    }
+    #gujaratidishes{
+        text-align: center;
+    }
+    .gujju{
+        margin-top: 100px;
+    }
+    .gujjudish{
+        margin: 20px;
+    }
+    .gujjudish a{
+        margin-top: 30px;
+        padding: 10px;
+        padding-top: 10px;
+        color: rgb(137, 61, 7);
+    }
+    .gujdish{
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        color: rgb(108, 3, 3);
+    }
+    .list1{
+        margin: 20px;
+        padding: 20px;
+    }
+    .tom{
+        color: rgb(109, 3, 38);
+    }
+    .list2{
+        margin: 20px;
+        padding: 20px;
+    }
+    .ringan{
+        color: rgb(109, 3, 38);
+    }
+    .list3{
+        margin: 20px;
+        padding: 20px;
+    }
+    .bharva{
+        color: rgb(109, 3, 38);
+    }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+
+  <div class="sidebar hidden" id="sidebar">
+    <a href="#" onclick="toggleSidebar()">✖ Close</a>
+    <a href="index.html">Home</a>
+    <a href="recipies.html">Recipes</a>
+    <a href="tips.html">Tips</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="details">
+    <table>
+        <tr>
+            <td>
+                <img src="indian sabji.jpg" alt="indian sabji" width="200px" height="200px">
+            </td>
+            <td>
+                <p>
+                    This website provides delicios recipies.Discover delicious recipes made with love and simple ingredients.
+                </p>
+                <p>
+                    Cook something amazing today – browse hundreds of tried-and-tested recipes.
+                </p>
+                <p>
+                    Your next favorite meal starts here.
+                </p>
+            </td>
+        </tr>
+    </table>
+  </div>
+
+  <div class="food">
+    <a href="#gujaratidishes" class="guj">Gujarati Food</a>
+    <a href="" class="south">South-Indian Food</a>
+    <a href="" class="raj">Rajasthani Food</a>
+    <a href="" class="other">Other Recipies</a>
+  </div>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('hidden');
+    }
+  </script>
+    </div>
+    <div class="gujju">
+        <h1 id="gujaratidishes">
+            Gujarati Deshes
+        </h1>
+        <table class="gujarati">
+            <tr>
+                <td>
+                    <img src="gujarati.jpg" alt="Gujarati Dishes" width="400px" height="400px">
+                </td>
+                <td class="about">
+                    <h3>
+                        Gujarati Dishes&#10084;
+                    </h3>
+                    <p>
+                        Gujarati cuisine is one of the oldest and most diverse vegetarian food traditions in India. 
+                    </p>
+                    <p>
+                        Originating from the western state of Gujarat, it reflects a rich blend of cultural, religious, and seasonal influences. 
+                    </p>
+                    <p>
+                        Known for its unique balance of sweet, spicy, salty, and sour flavors, Gujarati food is both nourishing and flavorful, offering something for every palate.
+                    </p>
+                    <p>
+                        Gujarati food is a vibrant and flavorful cuisine from the state of Gujarat in western India. 
+                    </p>
+                    <p>
+                        It’s known for its balance of sweet, salty, and spicy flavors in a single dish.
+                    </p>
+                    <p>
+                        Most dishes have a subtle sweetness, even savory ones. A pinch of sugar or jaggery is often added to vegetables and dal.
+                    </p>
+                    <p>
+                        A full Gujarati thali is a complete meal with roti, dal/kadhi, rice, vegetables, farsan (snacks), chutneys, pickles, and sweets — served all at once. 
+                    </p>
+                    <p>
+                        Snacks like Dhokla, Khandvi, Patra, Handvo, and Fafda are iconic. Many are steamed or lightly fried, making them light and tasty.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="gujjudish">
+        <a href="#gujdish" class="sev">Sev Tameta Nu Shak</a>
+        <a href="#ringan" class="ringan">Ringan No Odo</a>
+        <a href="#bharva" class="bharva">Barva Ringan</a>
+        <a href="" class="handvo">Handvo</a>
+        <a href="" class="dhokla">Dhokla</a>
+        <a href="" class="khandvi">Khandvi</a>
+        <a href="" class="patra">Patra</a>
+        <a href="" class="fafda">Fafda</a>
+        <a href="" class="muthuya">Muthiya</a>
+        <a href="" class="dal">Dal Dhokli</a>
+        <a href="" class="shiro">Shiro</a>
+        <a href="" class="masala">Masala Bhindi</a><br/>
+        <h1 class="gujdish" id="gujdish">
+            Sev Tameta Nu Shak
+        </h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="sevtameta.jpg" alt="Sev Tameta Nu Shak">
+                </td>
+                <td>
+                    <h3 class="list1">
+                        Ingrediants
+                    </h3>
+                    <ul class="list1">
+                        <li>Tomatoes – 4 medium-sized (finely chopped or pureed)</li>
+                        <li>Onion – 1 small (optional, finely chopped)</li>
+                        <li>Ginger-Garlic Paste – 1 tsp</li>
+                        <li>Green Chili – 1 (finely chopped)</li>
+                        <li>Mustard Seeds (Rai) – 1/2 tsp</li>
+                        <li>Cumin Seeds (Jeera) – 1/2 tsp</li>
+                        <li>Asafoetida (Hing) – a pinch</li>
+                        <li>Turmeric Powder – 1/4 tsp</li>
+                        <li>Red Chili Powder – 1/2 tsp (adjust to taste)</li>
+                        <li>Coriander-Cumin Powder – 1 tsp</li>
+                        <li>Jaggery (Gur) – 1 tsp (or to taste)</li>
+                        <li>Salt – to taste</li>
+                        <li>Water – 1 cup</li>
+                        <li>Sev (Nylon Sev or Thick Sev) – 1 to 1.5 cups</li>
+                        <li>Oil – 2 tbsp</li>
+                        <li>Fresh Coriander Leaves – for garnish</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            Recipe
+        </h2>
+        <ul class="tom">
+            <li>
+                <h3 class="tom">
+                    Heat Oil:
+                </h3>
+                <p>
+                    In a pan, heat 2 tbsp of oil on medium flame. Add mustard seeds and let them splutter. Then add cumin seeds and a pinch of asafoetida.
+                </p>
+            </li>
+            <li>
+                <h3 class="tom">
+                    Sauté Aromatics:
+                </h3>
+                <p>
+                    Add green chili and ginger-garlic paste. Sauté for 30 seconds. If using onion, add now and sauté till translucent.
+                </p>
+            </li>
+            <li>
+                <h3 class="tom">
+                    Add Tomatoes:
+                </h3>
+                <p>
+                    Add chopped or pureed tomatoes. Cook until they become soft and oil starts to separate (about 5–7 minutes).
+                </p>
+            </li>
+            <li>
+                <h3 class="tom">
+                    Add Spices:
+                </h3>
+                <p>
+                    Add turmeric, red chili powder, coriander-cumin powder, and salt. Mix well and cook for another 2 minutes.
+                </p>
+            </li>
+            <li>
+                <h3 class="tom">
+                    Add Jaggery & Water:
+                </h3>
+                <p>
+                    Add jaggery and 1 cup of water. Let the curry simmer for 5 minutes. Adjust water based on how thick you want the gravy.
+                </p>
+            </li>
+            <li>
+                <h3class="tom">
+                    Turn Off Flame:
+                </h3>
+                <p>
+                    Once cooked, turn off the heat and add sev just before serving so it doesn’t get soggy. Stir gently.
+                </p>
+            </li>
+            <li>
+                <h3 class="tom">
+                    Garnish & Serve:
+                </h3>
+                <p>
+                    Garnish with chopped fresh coriander. Serve hot with roti, bhakri, or paratha.
+                </p>
+            </li>
+        </ul>
+        <h1 class="gujdish" id="ringan">
+            Ringan No Odo
+        </h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="ringan.jpg" alt="Ringan No Odo">
+                </td>
+                <td>
+                    <h3 class="list2">
+                        Ingrediants
+                    </h3>
+                    <ul class="list2">
+                        <li>Large Eggplant (Brinjal/Ringan) – 1 (medium to large size)</li>
+                        <li>Oil – 2 tbsp</li>
+                        <li>Mustard Seeds (Rai) – 1/2 tsp</li>
+                        <li>Cumin Seeds (Jeera) – 1/2 tsp</li>
+                        <li>Asafoetida (Hing) – a pinch</li>
+                        <li>Green Chilies – 1–2 (finely chopped)</li>
+                        <li>Garlic – 4–5 cloves (crushed or chopped)</li>
+                        <li>Ginger – 1 inch (grated or chopped)</li>
+                        <li>Onion – 1 medium (finely chopped)</li>
+                        <li>Tomatoes – 1 medium (chopped)</li>
+                        <li>Turmeric Powder – 1/4 tsp</li>
+                        <li>Red Chili Powder – 1/2 tsp (adjust to taste)</li>
+                        <li>Salt – to taste</li>
+                        <li>Fresh Coriander Leaves – chopped (for garnish)</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            Recipe
+        </h2>
+        <ul class="ringan">
+            <li>
+                <h3>Roast the Brinjal:</h3>
+                <p>
+                    Wash and dry the brinjal. Make small slits and insert 1–2 garlic cloves inside.
+                </p>
+                <p>
+                    Roast it directly on an open flame (or in an oven) until the skin is charred and the inside is soft. Keep turning for even roasting.
+                </p>
+                <p>
+                    Let it cool slightly. Peel off the skin and mash the pulp. Set aside.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Prepare the Masala:
+                </h3>
+                <p>
+                    Heat oil in a pan. Add mustard seeds, let them splutter. Then add cumin seeds and a pinch of asafoetida.
+                </p>
+                <p>
+                    Add green chilies, garlic, and ginger. Sauté for a few seconds.
+                </p>
+                <p>
+                    Add chopped onion and cook till golden brown.
+                </p>
+                <p>
+                    Add tomatoes, turmeric, red chili powder, and salt. Cook until the tomatoes are soft and oil starts to separate.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Add Roasted Brinjal:
+                </h3>
+                <p>
+                    Add the mashed brinjal into the cooked masala. Mix well.
+                </p>
+                <p>
+                    Cook for 5–7 minutes on low flame, stirring occasionally.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Garnish and Serve:
+                </h3>
+                <p>
+                    Add chopped coriander and mix.
+                </p>
+                <p>
+                    Serve hot with bajra rotla, bhakri, or phulka.
+                </p>
+            </li>
+        </ul>
+        <h1 class="gujdish" id="bharva">
+            Bharva Ringan
+        </h1>
+        <table>
+            <tr>
+                <td>
+                    <img src="bharwa.jpg" alt="Bharva Ringan" width="750" height="800">
+                </td>
+                <td>
+                    <h3 class="list3">
+                        Ingrediants For Stuffing
+                    </h3>
+                    <ul class="list3">
+                        <li>Peanuts – 2 tbsp (roasted & coarsely ground)</li>
+                        <li>Sesame Seeds (Til) – 1 tbsp (roasted)</li>
+                        <li>Fresh Coconut (grated) – 2 tbsp (or desiccated coconut)</li>
+                        <li>Coriander-Cumin Powder – 1 tsp</li>
+                        <li>Turmeric Powder – 1/4 tsp</li>
+                        <li>Red Chili Powder – 1/2 tsp</li>
+                        <li>Coriander Leaves – 2 tbsp (finely chopped)</li>
+                        <li>Ginger-Garlic-Green Chili Paste – 1 tbsp</li>
+                        <li>Jaggery (Gur) – 1 tsp (optional, grated)</li>
+                        <li>Lemon Juice – 1 tbsp</li>
+                        <li>Salt – to taste</li>
+                        <li>Oil – 1 tbsp (for binding the masala)</li>
+                    </ul>
+                    <h3 class="list3">
+                        Ingrediants For Main Dish
+                    </h3>
+                    <ul class="list3">
+                        <li>Small Brinjals (Ringan) – 6–8 (preferably all same size)</li>
+                        <li>Oil – 2–3 tbsp</li>
+                        <li>Mustard Seeds (Rai) – 1/2 tsp</li>
+                        <li>Cumin Seeds (Jeera) – 1/2 tsp</li>
+                        <li>Asafoetida (Hing) – a pinch</li>
+                        <li>Water – as needed</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <h2>
+            Recipes
+        </h2>
+        <ul class="bharva">
+            <li>
+                <h3>
+                    Prepare the Brinjals:
+                </h3>
+                <p>
+                    Wash and pat dry the brinjals.
+                </p>
+                <p>
+                    Keep the stem intact and make two cross-slits at the base without cutting all the way through, so they remain whole.
+                </p>
+                <p>
+                    Soak them in salted water for 5 minutes to reduce bitterness (optional).
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Make the Stuffing:
+                </h3>
+                <p>
+                    In a bowl, mix: ground peanuts, sesame seeds, coconut, coriander-cumin powder, turmeric, red chili powder, ginger-garlic-green chili paste, jaggery, lemon juice, chopped coriander, salt, and 1 tbsp oil.
+                </p>
+                <p>
+                    Mix to form a moist, crumbly masala. Adjust seasoning as needed.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Stuff the Brinjals:
+                </h3>
+                <p>
+                    Carefully stuff each slit brinjal with the prepared masala. Keep the remaining stuffing aside.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Cook the Bharva Ringan:
+                </h3>
+                <p>
+                    Heat 2–3 tbsp oil in a deep pan or kadhai.
+                </p>
+                <p>
+                    Add mustard seeds. When they splutter, add cumin seeds and asafoetida.
+                </p>
+                <p>
+                    Gently place the stuffed brinjals in the pan.
+                </p>
+                <p>
+                    Sprinkle the leftover stuffing on top and around them.
+                </p>
+                <p>
+                    Add 1/4 to 1/2 cup of water gently from the sides. Cover and cook on low heat for 20–25 minutes.
+                </p>
+                <p>
+                    Stir occasionally and gently flip the brinjals to cook evenly, without breaking them.
+                </p>
+                <p>
+                    Cook till the brinjals are soft and the masala is well blended.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Garnish & Serve:
+                </h3>
+                <p>
+                    Garnish with fresh coriander.
+                </p>
+                <p>
+                    Serve hot with rotli, bajra rotla, thepla, or khichdi.
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
